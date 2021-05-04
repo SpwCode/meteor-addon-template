@@ -22,10 +22,10 @@ import java.util.Optional;
     private void onTick(TickEvent.Post event) {
         if (mc.player == null) return;
         if (mc.world == null) return;
-        if (mc.interactionManager == null) return;
+        if (messages.isEmpty()) return;
 
         if (mc.player.getPosY() != 4) {
-            
+             mc.player.sendChatMessage("4");
         }
     }
 
