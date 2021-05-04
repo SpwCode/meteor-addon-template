@@ -1,6 +1,6 @@
 # Meteor Autologin
 
-A template to allow easy usage of the Meteor Addon API.
+A try to make autologin Meteor Addon.
 
 ### How to use:  
 - Clone this project
