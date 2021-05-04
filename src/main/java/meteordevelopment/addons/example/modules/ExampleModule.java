@@ -32,7 +32,7 @@ public class ExampleModule extends Module {
         if (mc.world == null) return;
         if (messages.isEmpty()) return;
 
-        if (mc.player.getPosY() != 4) {
+        if (mc.player.getPos().getY() != 4) {
              mc.player.sendChatMessage("4");
         }
     }
