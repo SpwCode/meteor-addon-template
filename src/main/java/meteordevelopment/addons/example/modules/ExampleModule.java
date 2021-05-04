@@ -18,7 +18,15 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
- @EventHandler
+
+public class ExampleModule extends Module {
+    private final List<String> messages = new ArrayList<>(); //add message list in settings menu
+    
+    public ExampleModule() {
+        super(ExampleAddon.CATEGORY, "example", "This is an example module inside a custom category.");
+    }
+    
+    @EventHandler
     private void onTick(TickEvent.Post event) {
         if (mc.player == null) return;
         if (mc.world == null) return;
@@ -27,10 +35,5 @@ import java.util.Optional;
         if (mc.player.getPosY() != 4) {
              mc.player.sendChatMessage("4");
         }
-    }
-
-public class ExampleModule extends Module {
-    public ExampleModule() {
-        super(ExampleAddon.CATEGORY, "example", "This is an example module inside a custom category.");
     }
 }
